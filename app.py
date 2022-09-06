@@ -7,10 +7,18 @@ app = Flask(__name__)
 
 model=pickle.load(open("final_model.pkl","rb"))
 
-@app.route("/home")
+@app.route("/login")
 @app.route("/")
+def login():
+        return render_template("name.html")
+    
+
+@app.route("/home",methods=["POST"])
 def home():
-        return render_template("index.html")
+    if len([str(x) for x in request.form.values() if x!=""])==3:
+        return render_template("index.html",statement=[str(x) for x in request.form.values() if x!=""])
+    else:
+        return redirect(url_for("login"))
     
 
 @app.route("/heart_risk")
@@ -21,8 +29,8 @@ def heart_risk():
 def no_heart_risk():
     return render_template("no_heart_risk.html")
 
-@app.route("/submit",methods=["POST"])
-def submit():
+@app.route("/predict",methods=["POST"])
+def predict():
     int_features = [float(x) for x in request.form.values()]
     if np.sum(int_features)==0.0:
         return render_template("index.html",error_statement1="Please fill in the form! You cannot submit the empty form.")

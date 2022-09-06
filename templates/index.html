@@ -7,8 +7,11 @@
     </head>
     <body>
         <h1>Heart Risk Predictor</h1>
+        {% for _ in statement %}
+        <p>{{ _ }}</p>
+        {% endfor %}
         <div class="whole_form_block">
-            <form action={{ url_for("submit") }} method='post' class="marksform">
+            <form action={{ url_for("predict") }} method='post' class="marksform">
                 <label for="Age">Age:</label><br>
                 <input type="text" id="age" name="age" value="0"><br>
                 <label for="Sex">Sex:</label><br>

@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../../static/img-for-namepage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+}
+.name-box {
+    width: 250px;
+    height: 240px;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.nb-title {
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+    text-align: center;
+}
+.name-form {
+    margin-left: 30px;
+    margin-top: 10px;
+
+}
+.name-box p{
+    margin: 5px;
+    padding: 0;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.name-box input{
+    margin-left: 10px;
+    border: none;
+}
+.submit-button {
+    margin-top: 10px;
+    margin-left: 70px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.submit-button:hover {
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(68, 68, 103);
+    border: none;
+}
+.submit-button:active {
+    opacity: 0.8;
+}
