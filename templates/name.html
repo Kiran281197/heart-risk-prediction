@@ -5,16 +5,23 @@
     </head>
     <body>
         <div class="name-box">
-            <h2 class="nb-title">Fill in the Form</h1>
+            <h3 class="nb-title">Fill in below details</h3>
             <form class="name-form" action={{ url_for("home") }} method="post">
-                <p>First Name:</p>
+                <p>First Name<span style="color: red">*</span></p>
                 <input type="text" id="firstname" name="firstname" placeholder="Enter First Name">
-                <p>Last Name:</p>
+                <p>Last Name<span style="color: red">*</span></p>
                 <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name">
-                <p>Preferred Name:</p>
+                <p>Preferred Name</p>
                 <input type="text" id="preferredname" name="preferredname" placeholder="Enter Preferred Name">
                 <button class="submit-button" type="submit">Submit</button>
             </form>
+            <p class="errmsg">{{ error_statement }}</p>
         </div>
     </body>
 </html>
+<style>
+    .errmsg {
+        color: red;
+        text-align: center;
+    }
+</style>

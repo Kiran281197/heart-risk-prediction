@@ -57,3 +57,8 @@ body {
 .submit-button:active {
     opacity: 0.8;
 }
+.errmsg {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}

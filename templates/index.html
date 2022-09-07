@@ -7,9 +7,7 @@
     </head>
     <body>
         <h1>Heart Risk Predictor</h1>
-        {% for _ in statement %}
-        <p>{{ _ }}</p>
-        {% endfor %}
+        <p class="welmsg">Welcome {{ name }}! Please enter the below details correctly to get a accuarate results.</p>
         <div class="whole_form_block">
             <form action={{ url_for("predict") }} method='post' class="marksform">
                 <label for="Age">Age:</label><br>
@@ -48,19 +46,51 @@
 </html>
 
 <style>
+    .welmsg {
+        text-align: center;
+        color: rgb(5, 8, 68);
+        font-weight: bold;
+    }
     .marksform {
         margin-left: 500px;
+    }
+    .marksform label{
+        font-weight: bold;
+    }
+    .marksform input{
+        padding-left: 14px;
+        padding-right: 20px;
+        background: transparent;
     }
     h1 {
         text-align: center;
     }
     button {
-        margin-left: 50px;
+        margin-left: 70px;
         margin-top: 10px;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: blueviolet;
+        color: white;
+    }
+    button:active {
+        opacity: 0.8;
     }
     .errst1 {
         text-align: center;
         color: red;
         font-weight: bold;
+        font-size: large;
+    }
+    body {
+        background-image: url("../static/heart_ai.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;    
     }
 </style>
