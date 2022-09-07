@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Heart Risk Predictor</h1>
-        <h2 class="welmsg">Welcome {{ name }}! Please enter the below details correctly to get a accuarate results.</h2>
+        <h2 class="welmsg">Welcome {{ name }}! Please enter the below details correctly to get accurate results.</h2>
         <div class="whole_form_block">
             <form action={{ url_for("predict") }} method='post' class="marksform">
                 <label for="Age">Age:</label><br>
@@ -18,7 +18,7 @@
                 <input type="text" id="cp" name="cp" value="0"><br>
                 <label for="trestbps">Blood Pressure while resting:</label><br>
                 <input type="text" id="trestbps" name="trestbps" value="0"><br>
-                <label for="chol">Cholestrol:</label><br>
+                <label for="chol">Cholesterol:</label><br>
                 <input type="text" id="chol" name="chol" value="0"><br>
                 <label for="fbs">Blood Sugar Level:</label><br>
                 <input type="text" id="fbs" name="fbs" value="0"><br>
@@ -26,7 +26,7 @@
                 <input type="text" id="restecg" name="restecg" value="0"><br>
                 <label for="thalach">Maximum Heart Rate:</label><br>
                 <input type="text" id="thalach" name="thalach" value="0"><br>
-                <label for="exang">Agina Value while excercising:</label><br>
+                <label for="exang">Agina Value while exercising:</label><br>
                 <input type="text" id="exang" name="exang" value="0"><br>
                 <label for="oldpeak">ST Depression Level:</label><br>
                 <input type="text" id="oldpeak" name="oldpeak" value="0"><br>
@@ -34,7 +34,7 @@
                 <input type="text" id="slope" name="slope" value="0"><br>
                 <label for="ca">Count of major vessels:</label><br>
                 <input type="text" id="ca" name="ca" value="0"><br>
-                <label for="thal">Type of deffect:</label><br>
+                <label for="thal">Type of defect:</label><br>
                 <input type="text" id="thal" name="thal" value="0"><br>
                 <button type="submit">Predict</button>
               </form>
